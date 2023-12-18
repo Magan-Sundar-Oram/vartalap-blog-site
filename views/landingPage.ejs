@@ -1,0 +1,144 @@
+<!--  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vartalap | Home Page</title>
+    <style>
+        body {
+            margin: 0;
+            background-image: url(home-img.jpg);
+        }
+
+        nav {
+            background-color: #3333339c;
+            color: #fff;
+            height: 70px;
+        }
+
+        nav ul {
+            float: right;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 10px 10px;
+        }
+
+        nav ul li a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 15px;
+            font-size: 20px;
+        }
+
+        nav ul li a:hover {
+            border-radius: 10px;
+            background-color: #555;
+        }
+
+        .logo {
+            font-size: 40px;
+            display: inline-block;
+            color: #fff;
+            text-decoration: none;
+            padding: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        section {
+            width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 10px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        .read-more {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        .read-more:hover {
+            background-color: #555;
+            border-radius: 10px;
+        }
+
+
+        footer {
+            width: 100%;
+            background-color: #53535381;
+            color: #f5f5f5;
+            padding: 5px;
+            text-align: center;
+            font-size: 20px;
+            
+            
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="/"class="logo">Vartalap</a>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/LoginPage">Login</a></li>
+            <li><a href="/RegisterPage">Register</a></li>
+           <% if(loginstatus==true){%>
+                <li><a href="/dashboard">Dashboard</a></li>
+            <%}%>
+        </ul>
+    </nav>
+
+   <% for(var i=0;i<title.length;i++){ %>
+    <section>
+        <h4>Author:<%=auth[i]%></h4>
+        <h2><%=title[i]%></h2>
+        <p></p>
+       <a href="/singlePost/<%=i%>" <button class="read-more">Read More</button></a>
+    </section>
+    <%}%>
+
+
+    <section>
+        <h2>Nmiet</h2>
+        <p>The very famous Aman Rajak Sir just attended this college...</p>
+        <button class="read-more">Read More</button>
+    </section>
+
+    <section>
+        <h2>Bhubaneswar</h2>
+        <p>Over 100kg Of Seized in Odisha, 2 Arrested:Police.</p>
+        <button class="read-more">Read More</button>
+    </section>
+
+    <section>
+        <h2>This the new Era of Web 3.0</h2>
+        <p>Major of the task in the internet is now being handled by AI.</p>
+        <button class="read-more">Read More</button>
+    </section>
+-->
+  <!--  <footer>
+        <p>&copy; 2023 Vartalap. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
+-->
+

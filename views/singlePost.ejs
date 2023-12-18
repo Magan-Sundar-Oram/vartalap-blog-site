@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vartalap | Single Post</title>
+    <style>
+        body {
+            margin: 0;
+            background-image: url(/singlepost-img.jpg);
+
+        }
+
+        nav {
+            background-color: #333333c9;
+            color: #fff;
+            height: 70px;
+        }
+
+        nav ul {
+            float: right;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 10px 10px;
+        }
+
+        nav ul li a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 15px;
+            font-size: 20px;
+        }
+
+        nav ul li a:hover {
+            border-radius: 10px;
+            background-color: #555;
+        }
+
+        .logo {
+            font-size: 40px;
+            display: inline-block;
+            color: #fff;
+            text-decoration: none;
+            padding: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .page-container {
+            width: 70%;
+            margin: 10px auto;
+            border-radius: 15px;
+            background-color: #dbdadaf5;
+            padding: 10px 30px;
+        }
+
+        .page-container h1 {
+            text-decoration: underline;
+        }
+
+
+
+
+        footer {
+            width: 100%;
+            background-color: #535353ce;
+            color: #f5f5f5;
+            padding: 5px;
+            text-align: center;
+            font-size: 20px;
+            position: fixed;
+            bottom: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="/" class="logo">Vartalap</a>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/LoginPage">Login</a></li>
+            <li><a href="/RegisterPage">Register</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-container">
+        <h1>View Blog-Post</h1>
+        <hr>
+        <h3>Title:-<%=title%>
+        </h3>
+        <hr>
+        <p>
+            <%=description%>
+        </p>
+
+    </div>
+
+
+
+
+    <footer>
+        <p>&copy; 2023 Vartalap. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

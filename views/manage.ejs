@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage User</title>
+</head>
+
+<style>
+     body {
+            margin: 0;
+            box-sizing: border-box;
+          /*  background-image: url(/edit-del-img.jpg);  */
+
+            background-color: antiquewhite;
+            background-repeat: no-repeat;
+
+        }
+
+        nav {
+            background-color: #3333339c;
+            color: #fff;
+            height: 70px;
+        }
+
+        nav ul {
+            float: right;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            border-radius: 10px;
+            display: inline-block;
+            margin: 10px 10px;
+        }
+
+        nav ul li a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 15px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        nav ul li a:hover {
+            border-radius: 10px;
+            background-color: #555;
+        }
+
+        .logo {
+            font-size: 40px;
+            display: inline-block;
+            color: #fff;
+            text-decoration: none;
+            padding: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .page-container{
+            width: 750px;
+            background-color: #f5f5f5;
+            margin: 200px auto;
+            padding: 50px;
+            line-height: 50px;
+            font-size: 20px;
+            border: outset 10px rgba(0, 0, 0, 0.494);
+
+        }
+        .page-container .button{
+            background-color: #555;
+            text-decoration:none;
+            color: #f5f5f5;
+            padding: 5px;
+            margin-left: 10px;
+            border-radius: 5px;
+        }
+        .page-container span{
+            margin-left: 10px;
+        }
+        .page-container h1{
+            border-bottom:5px solid #555;
+        }
+
+
+
+        footer {
+            width: 50px;
+            width: 100%;
+            background-color: #53535381;
+            color: #f5f5f5;
+            padding: 10px;
+            text-align: center;
+            font-size: 20px;
+            
+
+        }
+</style>
+
+<body>
+
+    <nav>
+        <a href="/" class="logo">Vartalap</a>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/logout">LogOut</a></li>
+            <!--  <li><span class="dash-span"><img src="dash-img.png" alt=""></span><span class="dash-span">Hi Magan</span></li>   -->
+        </ul>
+    </nav>
+
+
+
+    <div class="page-container">
+        <h1>Manage User</h1>
+        <%for(var i=0;i<users.length;i++){%>
+            <%if(usertyp[i]==1){%>
+          <div class="user"><span class="user-Name"><%=users[i]%>:-</span>
+         
+            <% if(userstatus[i]==1){%>
+         <span class="user-status">Active</span>
+         <%}%>
+        
+         <% if(userstatus[i]==0){%>
+            <span class="user-status">Inactive</span>
+         <%}%>
+          
+         <%if(userstatus[i]==1){%>
+            <a href="/deactivate/<%=i%>" class="button">deactivate</a>
+         <%}%>
+
+          <%if(userstatus[i]==0){%>
+           <a href="/activate/<%=i%>" class="button">activate</a>
+             <%}%>
+                </div>
+
+             <%}%>
+
+         <%}%>
+    </div>
+
+
+
+
+    <footer>
+        <p>&copy; 2023 Vartalap. All rights reserved.</p>
+    </footer>
+
+
+</body>
+
+</html>

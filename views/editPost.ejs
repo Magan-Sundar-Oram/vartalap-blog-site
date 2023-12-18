@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vartalap | Edit Post</title>
+    <style>
+        body {
+            margin: 0;
+            box-sizing: border-box;
+            background-image: url(/edit-post2-img.jpg);
+        }
+
+        nav {
+            background-color: #333333b4;
+            color: #fff;
+            height: 70px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+        }
+
+        nav ul {
+            float: right;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 10px 10px;
+        }
+
+        nav ul li a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 15px;
+            font-size: 20px;
+        }
+
+        nav ul li a:hover {
+            border-radius: 10px;
+            background-color: #555;
+        }
+
+        .logo {
+            font-size: 40px;
+            display: inline-block;
+            color: #fff;
+            text-decoration: none;
+            padding: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .form-container {
+            width: 70%;
+            max-width: 850px;
+            margin: 150px auto;
+            background-color: #f5f5f5b4;
+            padding: 40px;
+            border-radius: 10px;
+            border-style: none;
+        }
+
+        .form-container label {
+            display: block;
+            background-color: #555;
+            width: 98%;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px;
+            color: rgb(255, 255, 255);
+            margin-top: 20px;
+        }
+
+        .form-container h1 {
+            background-color: #f5f5f5;
+            color: #0078bd;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .form-container label{
+            width: 98%;
+            
+        }
+        #title-box  {
+            width: 99.8%;
+            height: 40px;
+        }
+
+        .post-input {
+            width: 100%;
+            font-size: 20px;
+            border-style: none;
+        }
+
+        input[type="submit"] {
+            width: 80px;
+            padding: 5px;
+            font-size: 15px;
+            font-weight: bold;
+            background-color: #f5f5f5;
+            color: #0078bd;
+            border: none;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+
+
+        footer {
+            height: 50px;
+            width: 100%;
+            background-color: #53535381;
+            color: #f5f5f5;
+            padding: 10px;
+            text-align: center;
+            font-size: 20px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="/" class="logo">Vartalap</a>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/dashboard">Dashboard</a></li>
+
+        </ul>
+    </nav>
+
+
+    <div class="page-container">
+
+
+
+        <form action="/epost" method="post">
+            <fieldset class="form-container">
+                <h1>Edit Your Post</h1>
+                <input type="hidden" name="index" value="<%=index%>">
+                <label for="title-box" class="post-input">Title</label>
+                <input type="text" name="etitle" id="title-box" class="post-input" value="<%=title%>">
+
+                <label for="description-box" class="post-input">Description</label>
+                <textarea name="edescription" id="description-box" cols="30" rows="10" class="post-input"></textarea>
+                <input type="submit" value="POST">
+            </fieldset>
+
+        </form>
+
+    </div>
+    <footer>
+        <p>&copy; 2023 Vartalap. All rights reserved.</p>
+    </footer>
+    <script>
+
+        var textarea = document.getElementById("description-box")
+        textarea.value = "<%=description%>"
+    </script>
+</body>
+
+</html>

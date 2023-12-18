@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vartalap | Edit&Delete Page</title>
+    <style>
+        body {
+            margin: 0;
+            box-sizing: border-box;
+            background-image: url(/edit-del-img.jpg);
+            background-repeat: no-repeat;
+
+        }
+
+        nav {
+            background-color: #3333339c;
+            color: #fff;
+            height: 70px;
+        }
+
+        nav ul {
+            float: right;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            border-radius: 10px;
+            display: inline-block;
+            margin: 10px 10px;
+        }
+
+        nav ul li a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 15px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        nav ul li a:hover {
+            border-radius: 10px;
+            background-color: #555;
+        }
+
+        .logo {
+            font-size: 40px;
+            display: inline-block;
+            color: #fff;
+            text-decoration: none;
+            padding: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /*  .dash-span{
+            display: inline;
+            width: 10px;
+        }
+*/
+        .page-container {
+            width: 70%;
+            background-color: #f5f5f5;
+            padding: 30px;
+            margin: 10px auto;
+            border-radius: 10px;
+        }
+
+        .page-container h2 {
+            font-size: 35px;
+            font-weight: bold;
+            color: #272727;
+            text-align: center;
+            border-bottom: 2px solid black;
+        }
+
+        .page-container h3 {
+            border-bottom: 1px solid black;
+            border-left: 2px solid brown;
+            padding: 5px;
+        }
+        .page-container h4{
+           margin-bottom: 5px;
+           text-decoration: underline;
+        }
+
+        .page-container button {
+            font-size: 15px;
+            background-color: #555;
+            color: white;
+            padding: 10px;
+            margin: 10px 10px;
+            display: inline-block;
+            border-radius:5px;
+            
+        }
+        .edit-del-button{
+            display: block;
+        }
+
+
+        footer {
+            width: 50px;
+            width: 100%;
+            background-color: #53535381;
+            color: #f5f5f5;
+            padding: 10px;
+            text-align: center;
+            font-size: 20px;
+            
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="/" class="logo">Vartalap</a>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/logout">LogOut</a></li>
+            <!--  <li><span class="dash-span"><img src="dash-img.png" alt=""></span><span class="dash-span">Hi Magan</span></li>   -->
+        </ul>
+    </nav>
+
+    <div class="page-container">
+        <h2>Edit/Delete Post</h2>
+        <% for(i=0;i<title.length;i++){ %>
+            <h3>Title:-<%=title[i] %>
+            </h3>
+            <h5><h4>Description:-</h4><%=description[i] %>
+            </h5>
+            <div class="edit-del-button">
+            <a href="/editPost/<%=i%>"><button>Edit Post</button></a>
+            <a href="/del/<%=i%>"><button>Delete Post</button></a>
+           </div>
+            <%}%>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Vartalap. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
